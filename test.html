@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    async function handleSubmit() {
+      const data = {
+        target: "formb",
+        payload: {
+          firstName: document.getElementById("fname").value,
+          lastName: document.getElementById("lname").value,
+        },
+      };
+      console.log("The form was submitted, and the values are ", data);
+      const response = await fetch("http://localhost:3000/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      console.log("The response was " + response);
+    }
+  </script>
+
+  <body>
+    <h2>HTML Forms</h2>
+
+    <form action="javascript:void(0);" onsubmit="handleSubmit()">
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" value="John" /><br />
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
