@@ -1,5 +1,5 @@
 {
-  "name": "node-form-test",
+  "name": "node-form",
   "version": "1.0.0",
   "description": "A node Express server test to handle HTML form data",
   "main": "server.js",

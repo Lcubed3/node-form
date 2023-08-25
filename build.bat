@@ -1,1 +1,1 @@
-docker build . -t lucaslist/node-form-test
+docker build . -t lucaslist/node-form
